@@ -1,4 +1,4 @@
-datasets/nottingham_database_separated
+datasets/nottingham_database_separated/
 model/modelaux.*
 GENRE_CLASSIFICATION/gen_genre_data.csv
 GENRE_CLASSIFICATION/genre_data.csv
