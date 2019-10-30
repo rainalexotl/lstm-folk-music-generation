@@ -1,5 +1,5 @@
 datasets/nottingham_database_separated/
-model/model*.png
-model/model*.txt
+model/*.png
+model/*.txt
 GENRE_CLASSIFICATION/gen_genre_data.csv
 GENRE_CLASSIFICATION/genre_data.csv
