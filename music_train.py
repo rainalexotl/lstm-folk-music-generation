@@ -4,6 +4,10 @@ import numpy as np
 import data_proc as dp
 import results as res
 import model_configuration as conf
+import sys
+
+
+gpu_available = torch.cuda.is_available()
 
 def split_into_batches(data, batch_size, seq_length):
     """
@@ -32,13 +36,6 @@ def split_into_batches(data, batch_size, seq_length):
         yield x, y
 
 
-
-# check gpu availability
-gpu_available = torch.cuda.is_available()
-if (gpu_available):
-    print("GPU available. Training on GPU!")
-else:
-    print("GPU unavailable. Training on CPU")
     
 class musicRNN(nn.Module):
     def __init__(self, vocab, n_hidden=512, n_layers=3, lr=0.001, dropout_prob=0.4):
@@ -108,7 +105,7 @@ def split_train_valid(data, val_frac):
     return data[:valid_idx], data[valid_idx:]
 
 # TRAINING
-def train(model, data, epochs=10, batch_size=10, seq_length=50, lr=0.001, clip=5, val_frac=0.1, print_every=10):
+def train(model, data, vocab, epochs=10, batch_size=10, seq_length=50, lr=0.001, clip=5, val_frac=0.1, print_every=10):
     model.train()
     
     optimizer = torch.optim.Adam(model.parameters(), lr=lr)
@@ -189,7 +186,21 @@ def train(model, data, epochs=10, batch_size=10, seq_length=50, lr=0.001, clip=5
                           "Training and Validation Loss for: {} Layers,  \n{} Hidden Units, and a {} Learning Rate".format(model.n_layers, model.n_hidden, model.lr),
                           "model_loss_plot.png")
       
-def main():
+def main(argv):
+    if (len(sys.argv) > 2):
+        print("Usage: python {} [model_name.pth]".format(sys.argv[0]))
+        sys.exit()
+
+    if (len(sys.argv) == 2):
+        model_name = sys.argv[1]
+    else:
+        model_name = 'model.pth'
+    
+    if (gpu_available):
+        print("GPU available. Training on GPU!")
+    else:
+        print("GPU unavailable. Training on CPU")
+
     data = dp.get_track_data(conf.path, False)
     vocab = dp.get_vocab(data)
     int2char = dict(enumerate(vocab))
@@ -199,7 +210,7 @@ def main():
     
     model = musicRNN(vocab, conf.n_hidden, conf.n_layers, conf.lr, conf.dropout)
     print(model)
-    train(model, int_encoded, epochs=conf.n_epochs, batch_size=conf.batch_size, 
+    train(model, int_encoded, vocab, epochs=conf.n_epochs, batch_size=conf.batch_size, 
           seq_length=conf.seq_length, clip=conf.grad_clip, lr=conf.lr, 
           val_frac=conf.val_frac, print_every=conf.print_every)
     checkpoint = {'n_hidden': model.n_hidden,
@@ -208,11 +219,11 @@ def main():
                   'tokens': model.tokens,
                   'int2char': model.int2char,
                   'char2int': model.char2int }
-    model_name = "model.pth"
+
     with open(model_name, 'wb') as f:
     	torch.save(checkpoint, f)
         
 if __name__ == "__main__":
-    main()
+    main(sys.argv[1:])
 
         
