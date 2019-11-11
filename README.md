@@ -14,7 +14,6 @@ This project requires that the following packages be installed
 * [Scikit-Learn](https://scikit-learn.org/stable/install.html)
 
 ## The Data
-
 The dataset that was used for this project was the [Nottingham Database](http://abc.sourceforge.net/NMD/) which contains 1200 monophonic British and American folk tunes all written in [**abc notation**](http://abcnotation.com/). `nottingham_data_prep.py` prepares the data by removing all comments, chords (written between quotation marks), and meta-data excluding the meter *M*, the key *K*, and the tune itslef. An example of a prepared tune is as follows
 
     M:4/4
@@ -25,7 +24,7 @@ The dataset that was used for this project was the [Nottingham Database](http://
     g3/2a/2 ge|df gB|ce d/2e/2d/2c/2|BG G2:|
 
 Here is what the abc notated text looks like on a traditional music staff
-<img src="./tune_imgs/generated_sample.png" width=650>
+<img src="./tune_imgs/ashover_bonnie_kate.png" width=650>
 
 All the tunes are saved in a single file: `nottingham_parsed.txt` in the `datasets/nottingham_database/` directory.
 
@@ -80,7 +79,7 @@ Here is the output, written in abc notation:
     af ag|f3 f3/2a/2|af ga|a2 d2|e3/2g/2 f/2e/2d/2e/2|f2 d:|
 
 Here is the generated tune written on a staff:
-<img src="./tune_imgs/ashover_bonnie_kate.png" width=650>
+<img src="./tune_imgs/generated_sample.png" width=650>
 
 ## Built With
 * [EasyABC](https://www.nilsliberg.se/ksp/easyabc/) - Open source ABC editor
