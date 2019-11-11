@@ -187,12 +187,12 @@ def train(model, data, vocab, epochs=10, batch_size=10, seq_length=50, lr=0.001,
                           "model_loss_plot.png")
       
 def main(argv):
-    if (len(sys.argv) > 2):
-        print("Usage: python {} [model_name.pth]".format(sys.argv[0]))
+    if (len(argv) > 1):
+        print("Usage: python3 music_train.py [model_name.pth]")
         sys.exit()
 
-    if (len(sys.argv) == 2):
-        model_name = sys.argv[1]
+    if (len(argv) == 1):
+        model_name = argv[0]
     else:
         model_name = 'model.pth'
     
