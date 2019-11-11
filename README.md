@@ -25,7 +25,6 @@ The dataset that was used for this project was the [Nottingham Database](http://
     g3/2a/2 ge|df gB|ce d/2e/2d/2c/2|BG G2:|
 
 Here is what the abc notated text looks like on a traditional music staff
-<!-- ![Here is what the abc notated text looks like on a traditional music staff](./tune_imgs/generated_sample.png) -->
 <img src="./tune_imgs/generated_sample.png" width=650>
 
 All the tunes are saved in a single file: `nottingham_parsed.txt` in the `datasets/nottingham_database/` directory.
@@ -81,7 +80,6 @@ Here is the output, written in abc notation:
     af ag|f3 f3/2a/2|af ga|a2 d2|e3/2g/2 f/2e/2d/2e/2|f2 d:|
 
 Here is the generated tune written on a staff:
-<!-- [The generated tune written on a staff](./tune_imgs/ashover_bonnie_kate.png | width=850) -->
 <img src="./tune_imgs/ashover_bonnie_kate.png" width=650>
 
 ## Built With
