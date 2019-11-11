@@ -1,5 +1,5 @@
 datasets/nottingham_database_separated/
 model/*.png
 model/*.txt
-GENRE_CLASSIFICATION/gen_genre_data.csv
-GENRE_CLASSIFICATION/genre_data.csv
+GENRE_EVALUATION/real_data.csv
+__pycache__/
