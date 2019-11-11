@@ -26,7 +26,7 @@ The dataset that was used for this project was the [Nottingham Database](http://
 
 Here is what the abc notated text looks like on a traditional music staff
 <!-- ![Here is what the abc notated text looks like on a traditional music staff](./tune_imgs/generated_sample.png) -->
-<img src="./tune_imgs/generated_sample.png" width=850>
+<img src="./tune_imgs/generated_sample.png" width=650>
 
 All the tunes are saved in a single file: `nottingham_parsed.txt` in the `datasets/nottingham_database/` directory.
 
@@ -82,7 +82,7 @@ Here is the output, written in abc notation:
 
 Here is the generated tune written on a staff:
 <!-- [The generated tune written on a staff](./tune_imgs/ashover_bonnie_kate.png | width=850) -->
-<img src="./tune_imgs/ashover_bonnie_kate.png" width=850>
+<img src="./tune_imgs/ashover_bonnie_kate.png" width=650>
 
 ## Built With
 * [EasyABC](https://www.nilsliberg.se/ksp/easyabc/) - Open source ABC editor
