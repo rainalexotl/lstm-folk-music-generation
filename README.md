@@ -24,6 +24,8 @@ The dataset that was used for this project was the [Nottingham Database](http://
     BG2A/2B/2|cA dB|ec2d/2e/2|fzde/2f/2|
     g3/2a/2 ge|df gB|ce d/2e/2d/2c/2|BG G2:|
 
+![Here is what the abc notated text looks like on a traditional music staff](./tune_imgs/generated_sample.png)
+
 All the tunes are saved in a single file: `nottingham_parsed.txt` in the `datasets/nottingham_database/` directory.
 
 ## Training
@@ -67,7 +69,7 @@ To generate a tune of meter 3/4 and in the D minor key:
 
 	python3 music_gen.py -m ./models/musicmodel.pth -f ./mytune.abc -p 'M:3/4\nK:Dm'
 
-Here is the output:
+Here is the output, written in abc notation:
 
     M:3/4
     K:Dm
@@ -75,3 +77,9 @@ Here is the output:
     d3/2c/2 Bd|ed ef|g2 f3/2e/2|dc Bd|fe ef|\
     g3/2a/2 ga/2a/2|
     af ag|f3 f3/2a/2|af ga|a2 d2|e3/2g/2 f/2e/2d/2e/2|f2 d:|
+
+![The generated tune written on a staff](./tune_imgs/ashover_bonnie_kate.png)
+
+## Built With
+* [EasyABC](https://www.nilsliberg.se/ksp/easyabc/) - Open source ABC editor
+* [Direct MIDI to MP3 Converter](https://www.pistonsoft.com/midi2mp3.html) - Used in this project to convert to and from MIDI and WAV audio formats
