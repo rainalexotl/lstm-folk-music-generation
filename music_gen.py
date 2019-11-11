@@ -85,6 +85,7 @@ def sample(model, prompt='</s>', top_k=None, eos_tok='</s>'):
     else:
         model.cpu()
         
+    # do...until
     while True: # until a tune of valid syntax is generated
         tokens = prep_prompt(prompt)
         h = model.init_hidden(1)
