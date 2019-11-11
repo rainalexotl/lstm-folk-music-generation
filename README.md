@@ -9,9 +9,7 @@ Music in general is the result of a sequence of musical notes played and organis
 The final generator is a result of data preparation, data processing, and neural network training, all implemented in Python.
 
 ## Prerequisites
-This project requires that the following packages be installed
-* [PyTorch](https://pytorch.org/get-started/locally/)
-* [Scikit-Learn](https://scikit-learn.org/stable/install.html)
+This project requires that [PyTorch](https://pytorch.org/get-started/locally/) be installed
 
 ## The Data
 The dataset that was used for this project was the [Nottingham Database](http://abc.sourceforge.net/NMD/) which contains 1200 monophonic British and American folk tunes all written in [**abc notation**](http://abcnotation.com/). `nottingham_data_prep.py` prepares the data by removing all comments, chords (written between quotation marks), and meta-data excluding the meter *M*, the key *K*, and the tune itslef. An example of a prepared tune is as follows
