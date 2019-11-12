@@ -71,7 +71,7 @@ def valid_sample(sample):
     """
     checks the syntax of the generated tune
     """
-    if re.match('M:[0-9]\/[0-9]\nK:[A-G]+m*\n[\d\D]+', sample):
+    if re.match('M:[0-9]\/[0-9]\nK:[A-G]m?\n[\d\D]+', sample):
         return True
     return False
 
