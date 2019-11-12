@@ -80,5 +80,5 @@ Here is the generated tune written on a staff:
 <img src="./tune_imgs/generated_sample.png" width=650>
 
 ## Built With
-* [EasyABC](https://www.nilsliberg.se/ksp/easyabc/) - Open source ABC editor
+* [EasyABC](https://www.nilsliberg.se/ksp/easyabc/) - Open source software for creating, editing, and visualising ABC data
 * [Direct MIDI to MP3 Converter](https://www.pistonsoft.com/midi2mp3.html) - Used in this project to convert to and from MIDI and WAV audio formats
