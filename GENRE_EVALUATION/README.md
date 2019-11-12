@@ -40,10 +40,10 @@ After training using the Logistic REgression, K-Nearest Neighbor and Gaussian Na
 When passing the generated data through each of the three models, the accuracy for each was extremely low. By comparing the spectogram of a "real" folk song to that of a generated folk song the difference is clear.
 
 Below is the spectogram of 10 seconds of Refugee by Alex Chu, a folk song within the dataset
-<img src="../tune_imgs/alex_chu_spect.png" width=350>
+<img src="../tune_imgs/alex_chu_spect.png" width=500>
 
 Below is the spectogram of 10 seconds a generated folk tune
-<img src="../tune_imgs/eos5_spect.png" width=350>
+<img src="../tune_imgs/eos5_spect.png" width=500>
 
 Spectograms are a visual representation of the spectrum of frequencies of sound as it varies over time. The above spectograms represent the frequencies of only 10-seconds of each song, however the difference is apparent. This could be due to the fact that the "real" songs are not monophonic while the generated tunes are.
 
